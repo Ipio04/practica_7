@@ -3,8 +3,7 @@ name: Test and Build
 on:
 push:
 branches: [ "main" ]
-# Permisos para leer el contenido del repositorio, necesario para ejecutar las acciones
-de CI/CD
+# Permisos para leer el contenido del repositorio, necesario para ejecutar las acciones de CI/CD
 permissions:
 contents: read
 jobs:
@@ -16,8 +15,7 @@ steps: # Pasos a seguir para ejecutar el trabajo
 uses: actions/setup-python@v3
 with:
 python-version: "3.11"
-- name: Install dependencies # Instala las dependencias necesarias para ejecutar
-las pruebas
+- name: Install dependencies # Instala las dependencias necesarias para ejecutar las pruebas
 run: pip install -r requirements.txt
 - name: Test with pytest # Ejecuta las pruebas utilizando pytest
 working-directory: src # Directorio donde se encuentran las pruebas
